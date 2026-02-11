@@ -1,1 +1,186 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chewathai Residence Asoke | Duplex</title>
+
+<style>
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  margin: 20px;
+  background: #fff;
+  color: #222;
+}
+
+h1 {
+  margin-bottom: 10px;
+}
+
+.price-box {
+  background: linear-gradient(135deg, #fff6e5, #ffffff);
+  border: 2px solid #f2c94c;
+  border-radius: 16px;
+  padding: 20px;
+  max-width: 420px;
+  margin-bottom: 25px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+}
+
+.price-tag {
+  font-size: 14px;
+  font-weight: bold;
+  color: #b45309;
+}
+
+.price {
+  font-size: 32px;
+  font-weight: bold;
+  color: #c0392b;
+}
+
+.price-sub {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.price-info span {
+  display: inline-block;
+  background: #fff;
+  padding: 6px 10px;
+  margin: 4px;
+  border-radius: 8px;
+  border: 1px solid #eee;
+  font-size: 14px;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 12px;
+  margin-bottom: 30px;
+}
+
+.gallery img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 14px;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+}
+
+.lightbox {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.9);
+  justify-content: center;
+  align-items: center;
+}
+
+.lightbox img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 10px;
+}
+
+.contact-buttons {
+  position: fixed;
+  right: 20px;
+  bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  z-index: 999;
+}
+
+.contact-buttons a {
+  display: block;
+  padding: 14px 22px;
+  border-radius: 50px;
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+  color: white;
+  text-align: center;
+}
+
+.call-btn { background: #3b82f6; }
+.line-btn { background: #22c55e; }
+.whatsapp-btn { background: #25D366; }
+
+.map {
+  margin-top: 30px;
+  border-radius: 16px;
+  overflow: hidden;
+}
+</style>
+</head>
+
+<body>
+
+<h1>Chewathai Residence Asoke – Duplex </h1>
+
+<section class="price-box">
+  <div class="price-tag">💰 ราคาเสนอขาย</div>
+  <div class="price">4,800,000 บาท</div>
+  <div class="price-sub">ค่าโอน 50/50</div>
+  <div class="price-info">
+    <span>📐 29.17 Sq.m.</span>
+    <span>🏢 25th Floor</span>
+    <span>🚆 MRT Rama 9</span>
+  </div>
+</section>
+
+<div class="gallery">
+  <img src="img.jpg" onclick="openLightbox(this)">
+  <img src="img1.jpg" onclick="openLightbox(this)">
+  <img src="img2.jpg" onclick="openLightbox(this)">
+  <img src="img3.jpg" onclick="openLightbox(this)">
+  <img src="img4.jpg" onclick="openLightbox(this)">
+</div>
+
+<div class="map">
+  <iframe
+    src="https://www.google.com/maps?q=KnightsBridge%20Space%20Rama%209&output=embed"
+    width="100%"
+    height="350"
+    style="border:0;"
+    loading="lazy">
+  </iframe>
+</div>
+
+<div id="lightbox" class="lightbox" onclick="closeLightbox()">
+  <img id="lightbox-img">
+</div>
+
+<div class="contact-buttons">
+  <a class="call-btn" href="tel:0931359945">Call 093-135-9945</a>
+  <a class="line-btn" href="https://line.me/ti/p/~oleproperty">LINE @aspireproperty</a>
+  <a class="whatsapp-btn" href="https://wa.me/66931359945">WhatsApp</a> +6693-137-9945
+</div>
+
+<script>
+function openLightbox(img) {
+  document.getElementById("lightbox-img").src = img.src;
+  document.getElementById("lightbox").style.display = "flex";
+}
+
+function closeLightbox() {
+  document.getElementById("lightbox").style.display = "none";
+}
+</script>
+
+</body>
+</html>
 
